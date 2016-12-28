@@ -1,0 +1,7 @@
+---
+
+# Setup of the raspberry pis for the RoHAWKtics Scouting Server
+- hosts: pi
+  roles:
+    - base_setup
+    - users

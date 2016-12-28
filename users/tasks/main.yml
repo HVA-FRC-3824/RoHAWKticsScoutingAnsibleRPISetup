@@ -1,0 +1,8 @@
+---
+# Created password with:
+# python -c 'import crypt; print crypt.crypt("password", "$1$SomeSalt$")''
+
+- name: pi
+  user: name=pi password=$1$SomeSalt$33bf.WRvNM0IPNqSZE/iD0
+- name: andrew
+  user: name=andrew password=$1$SomeSalt$33bf.WRvNM0IPNqSZE/iD0 groups=sudo

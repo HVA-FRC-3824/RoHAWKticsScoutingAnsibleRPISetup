@@ -1,0 +1,78 @@
+---
+- name: update apt-cache
+  apt: update_cache=yes cache_valid_time=3600
+  sudo: yes
+- name: Update all packages to the latest version
+  apt: upgrade=dist
+  sudo: yes
+
+- name: install common packages
+  apt: pkg={{item}} state=installed
+  sudo: yes
+  with_items:
+    - vim
+    - vim-nox
+    - git
+    - build-essential
+    - python-dev
+    - python3-dev
+    - python-pip
+    - python3-pip
+    - python-setuptools
+    - python3-setuptools
+    - bluetooth
+
+- name: Setup pip
+  pip: name=pip state=latest
+- name: Setup pip3
+  pip: name=pip executable=pip3 state=latest
+
+- name: Setup flake8
+  pip: name=flake8 state=latest
+- name: Setup flake8 for python3
+  pip: name=flake8 executable=pip3 state=latest
+
+- name: Setup install ez_setup
+  pip: name=ez_setup state=latest
+- name: Setup install ez_setup for python3
+  pip: name=ez_setup executable=pip3 state=latest
+
+- name: Setup install setuptools
+  pip: name=setuptools state=latest
+- name: Setup install setuptools for python 3
+  pip: name=setuptools executable=pip3 state=latest
+
+- name: Setup install requests
+  pip: name=requests state=latest
+- name: Setup install requests for python3
+  pip: name=requests executable=pip3
+
+- name: Setup install firebase
+  pip: name=python-firebase state=latest
+- name: Setup intstall firebase for python 3
+  pip: name=python-firebase executable=pip3 state=latest
+
+- name: Setup install Google Voice
+  pip: name=pygooglevoice state=latest
+- name: Setup install Google Voice for python3
+  pip: name=pygooglevoice executable=pip3 state=latest
+
+- name: Setup install Serial
+  pip: name=pyserial state=latest
+- name: Setup install Serial for python 3
+  pip: name=pyserial executable=pip3 state=latest
+
+- name: Setup install pybluez
+  pip: name=pybluez state=latest
+- name: Setup install pybluez
+  pip: name=ppybluez executable=pip3 state=latest
+
+- name: Setup install scipy
+  pip: name=scipy state=latest
+- name: Setup install scipy for python3
+  pip: name=scipy executable=pip3 state=latest
+
+- name: Setup install numpy
+  pip: name=numpy state=latest
+- name: Setup install numpy for python3
+  pip: name=numpy executable=pip3 state=latest
