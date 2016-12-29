@@ -27,6 +27,7 @@
     - libbluetooth-dev
     - libssl-dev
     - network-manager
+    - libusb-dev
 
 - name: Setup pip
   pip: name=pip state=latest
