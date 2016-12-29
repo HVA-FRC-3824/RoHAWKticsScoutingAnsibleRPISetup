@@ -25,6 +25,7 @@
     - python-scipy
     - python3-scipy
     - libbluetooth-dev
+    - libssl-dev
 
 - name: Setup pip
   pip: name=pip state=latest
