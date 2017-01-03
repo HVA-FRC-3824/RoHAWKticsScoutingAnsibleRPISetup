@@ -69,6 +69,11 @@
 - name: Setup install Serial for python 3
   pip: name=pyserial executable=pip3 state=latest
 
+- name: Setup install twilio
+  pip: name=twilio state=latest
+- name: Setup install twilio for python 3
+  pip: name=twilio executable=pip3 state=latest
+
 - name: Setup install pybluez
   pip: name=pybluez state=latest
   ignore_errors: yes
