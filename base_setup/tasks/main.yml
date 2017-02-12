@@ -80,3 +80,10 @@
 - name: Setup install pybluez
   pip: name=pybluez executable=pip3 state=latest
   ignore_errors: yes
+
+- name: Setup install RPi.GPIO
+  pip: name=RPi.GPIO state=latest
+  ignore_errors: yes
+- name: Setup install RPi.GPIO
+  pip: name=RPi.GPIO executable=pip3 state=latest
+  ignore_errors: yes
