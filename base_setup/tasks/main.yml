@@ -87,3 +87,17 @@
 - name: Setup install RPi.GPIO
   pip: name=RPi.GPIO executable=pip3 state=latest
   ignore_errors: yes
+  
+  - name: Setup install simple-crypt
+  pip: name=simple-crypt state=latest
+  ignore_errors: yes
+- name: Setup install simple-crypt
+  pip: name=simple-crypt executable=pip3 state=latest
+  ignore_errors: yes
+  
+  - name: Setup install libusb1
+  pip: name=libusb1 state=latest
+  ignore_errors: yes
+- name: Setup install libusb1
+  pip: name=libusb1 executable=pip3 state=latest
+  ignore_errors: yes
